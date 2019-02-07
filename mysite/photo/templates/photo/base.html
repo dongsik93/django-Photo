@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Photo</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" type="text/css" />
+    <link rel="shortcut icon" href="{% static 'img/a.jpg' %}">
+</head>
+<body>
+    
+    <ul>
+        <!--예전에 쓰던 url 코드-->
+        <!--<li><a href="/photos/">Home</a></li>-->
+        <!--앞으로 바꿀 url 코드-->
+        <li><a href="{% url 'photos:list' %}">Home</a></li>
+        <li><a href="{% url 'photos:create' %}">Create</a></li>
+    </ul>
+    
+    {% block bb %}
+    
+    {% endblock %}
+    
+</body>
+</html>
